@@ -1,0 +1,88 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build and Run",
+            "type": "shell",
+            "command": "cmd",
+            "args": [
+                "/c", "${workspaceFolder}/build_and_run.bat"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": [],
+            "detail": "Build C++ module and run Python script"
+        },
+        {
+            "label": "Build Only",
+            "type": "shell",
+            "command": "cmd",
+            "args": [
+                "/c", "${workspaceFolder}/build_and_run.bat", "-BuildOnly"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "detail": "Build C++ module only"
+        },
+        {
+            "label": "Run Only",
+            "type": "shell",
+            "command": "cmd",
+            "args": [
+                "/c", "${workspaceFolder}/build_and_run.bat", "-RunOnly"
+            ],
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": [],
+            "detail": "Run Python script only (assumes module is already built)"
+        },
+        {
+            "label": "Clean Build",
+            "type": "shell",
+            "command": "cmd",
+            "args": [
+                "/c", "${workspaceFolder}/build_and_run.bat", "-Clean"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "detail": "Clean build directory and rebuild everything"
+        }
+    ]
+}

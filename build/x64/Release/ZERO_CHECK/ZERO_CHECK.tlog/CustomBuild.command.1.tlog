@@ -1,0 +1,10 @@
+^C:\USERS\CHEUN\GITDEV\FUTU_PY\BUILD\CMAKEFILES\C42E7D87FB46B88ACC781C0FFE5C8640\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/cheun/GitDev/futu_py -BC:/Users/cheun/GitDev/futu_py/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/cheun/GitDev/futu_py/build/backtest.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

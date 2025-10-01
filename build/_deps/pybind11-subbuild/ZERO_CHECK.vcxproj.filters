@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\cheun\GitDev\futu_py\build\_deps\pybind11-subbuild\CMakeFiles\25443acaf685ef6a1e0c868e6c94fe39\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{CB3AAD52-4D21-32A2-98CA-2355BFE0CE1A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
