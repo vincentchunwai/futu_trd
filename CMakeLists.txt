@@ -20,9 +20,9 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(pybind11)
 
 # Create Python module
-pybind11_add_module(backtest backtest.cpp)
+pybind11_add_module(backtest src/cpp/backtest.cpp)
 
 # Copy the built module to the source directory for easy import
 add_custom_command(TARGET backtest POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:backtest> ${CMAKE_SOURCE_DIR}
+    COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:backtest> ${CMAKE_SOURCE_DIR}/src/python
 )

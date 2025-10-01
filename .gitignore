@@ -1,14 +1,11 @@
 # Virtual environment
-/venv
 venv/
 
 # Build directories
-/build
 build/
 **/build/
 
 # VS Code
-/.vscode
 .vscode/
 
 # C++ build artifacts

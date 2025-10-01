@@ -26,6 +26,9 @@ echo.
 echo === C++ Python Extension Build and Run ===
 echo.
 
+REM Change to project root directory
+cd /d "%~dp0.."
+
 REM Clean build if requested
 if %CLEAN%==1 (
     echo =^> Cleaning build directory...
@@ -68,29 +71,19 @@ if %RUN_ONLY%==0 (
 
 REM Skip Python execution if BuildOnly is specified
 if %BUILD_ONLY%==0 (
-    REM Check if module exists and copy if needed
-    if not exist backtest.pyd (
-        echo =^> Module not found in project directory, checking build directory...
-        if exist build\%CONFIG%\backtest.cp313-win_amd64.pyd (
-            echo =^> Copying module to project directory...
-            copy "build\%CONFIG%\backtest.cp313-win_amd64.pyd" "backtest.pyd" >nul
-            echo Module copied successfully
-        ) else (
-            echo Error: Built module not found. Please build first.
-            exit /b 1
-        )
-        echo.
-    )
-
-    REM Run Python script
+    REM Run Python script from src/python directory
     echo =^> Running Python script...
+    cd src\python
     python main.py
     if errorlevel 1 (
         echo Error: Python script execution failed
         exit /b 1
     )
-    echo Python script completed successfully
+
+    echo Python script executed successfully
     echo.
+    cd ..\..
+    
 )
 
 echo All operations completed successfully!
