@@ -1,3 +1,22 @@
+# Virtual environment
 /venv
+venv/
+
+# Build directories
 /build
+build/
+**/build/
+
+# VS Code
 /.vscode
+.vscode/
+
+# C++ build artifacts
+*.exe
+*.dll
+*.so
+*.dylib
+*.lib
+*.a
+*.obj
+*.o
